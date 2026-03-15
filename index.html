@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Fondation And Ligueyal Mame Khalifa | Site Officiel</title>
+    <title>Fondation And Ligueyal Mame Khalifa | Officiel</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -13,19 +13,20 @@
             --bleu-nuit: #051937;
             --or-prestige: #c5a021;
             --blanc: #ffffff;
-            --gris-section: #f8fafd;
-            --wave-color: #1c9ade;
+            --gris-section: #f0f4f8;
+            --wave-bleu: #1c9ade;
+            --whatsapp-vert: #25D366;
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
         body { 
             font-family: 'Montserrat', sans-serif; 
             margin: 0; padding: 0;
-            color: #2c3e50; 
-            background: #fff;
+            color: #2c3e50; background: var(--blanc);
+            overflow-x: hidden;
         }
 
-        /* NAVIGATION */
+        /* NAVIGATION MENU */
         nav {
             background: var(--bleu-nuit);
             padding: 15px 0;
@@ -37,67 +38,72 @@
         nav a {
             color: white; margin: 5px 12px;
             text-decoration: none; font-weight: 700; font-size: 0.75em;
-            text-transform: uppercase;
+            text-transform: uppercase; letter-spacing: 1px;
         }
 
-        /* HEADER */
+        /* HEADER D'ACCUEIL */
         header {
-            background: linear-gradient(rgba(5, 25, 55, 0.8), rgba(5, 25, 55, 0.8)), url('https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1500&auto=format&fit=crop');
+            background: linear-gradient(rgba(5, 25, 55, 0.85), rgba(5, 25, 55, 0.85)), 
+                        url('https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1500&auto=format&fit=crop');
             background-size: cover; background-position: center;
             color: white; padding: 80px 20px; text-align: center;
         }
         .logo-box {
-            width: 160px; height: 160px; background: white; border-radius: 50%;
-            margin: 0 auto 20px; border: 5px solid var(--or-prestige);
+            width: 170px; height: 170px; background: white; border-radius: 50%;
+            margin: 0 auto 25px; border: 6px solid var(--or-prestige);
             overflow: hidden; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
         .logo-box img { width: 100%; height: 100%; object-fit: cover; }
 
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.4em; margin-bottom: 10px; }
+
         /* SECTIONS BIEN SÉPARÉES */
-        section { padding: 80px 20px; text-align: center; }
-        section:nth-child(even) { background: var(--gris-section); } /* Alterne les couleurs de fond */
+        section { padding: 100px 20px; text-align: center; width: 100%; }
+        .sep-grey { background: var(--gris-section); }
+        .sep-white { background: var(--blanc); }
 
-        .container { max-width: 1000px; margin: auto; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.2em; color: var(--bleu-nuit); margin-bottom: 40px; }
-        h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--or-prestige); margin: 15px auto; }
+        .container { max-width: 1100px; margin: auto; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.2em; color: var(--bleu-nuit); margin-bottom: 30px; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--or-prestige); margin: 15px auto; border-radius: 2px; }
 
-        /* COTISATION / DON */
-        .cotisation-card {
-            background: white;
-            border: 2px solid var(--or-prestige);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            max-width: 500px;
-            margin: 0 auto;
+        /* BOUTONS D'ACTION */
+        .btn {
+            display: inline-block; padding: 18px 35px; border-radius: 50px;
+            text-decoration: none; font-weight: 900; font-size: 1em;
+            margin: 10px; transition: 0.3s; color: white; border: none; cursor: pointer;
         }
-        .info-pay { font-size: 1.2em; font-weight: bold; margin: 15px 0; color: var(--bleu-nuit); }
-        
-        .btn-wave {
-            display: inline-block;
-            background: var(--wave-color);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 900;
-            margin-top: 20px;
-            font-size: 1.1em;
-            transition: 0.3s;
-        }
-        .btn-wave:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(28, 154, 222, 0.4); }
+        .btn-wa { background: var(--whatsapp-vert); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); }
+        .btn-wave { background: var(--wave-bleu); box-shadow: 0 8px 20px rgba(28, 154, 222, 0.3); }
+        .btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
 
-        /* GRILLE MISSIONS */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .card i { font-size: 2.5em; color: var(--or-prestige); margin-bottom: 15px; }
+        /* CARTE DE COTISATION */
+        .pay-card {
+            background: white; border-radius: 25px; padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 550px; margin: 40px auto; border: 2px solid #eee;
+        }
+        .pay-info { margin: 20px 0; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .pay-info label { font-size: 0.8em; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .pay-info div { font-size: 1.4em; font-weight: 700; color: var(--bleu-nuit); margin-top: 5px; }
+        /* GRILLE DE MISSIONS */
+        .mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .m-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .m-card i { font-size: 3em; color: var(--or-prestige); margin-bottom: 20px; }
+
+        /* GALERIE */
+        .galerie-flex { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+        .galerie-flex img { width: 100%; max-width: 400px; height: 250px; object-fit: cover; border-radius: 15px; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
         /* FOOTER */
-        footer { background: var(--bleu-nuit); color: white; padding: 60px 20px; text-align: center; }
+        footer { background: var(--bleu-nuit); color: white; padding: 80px 20px; text-align: center; }
 
+        /* MOBILE OPTIMISATION */
         @media (max-width: 600px) {
-            h2 { font-size: 1.8em; }
-            section { padding: 60px 15px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.7em; }
+            section { padding: 70px 15px; }
+            .pay-card { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -105,7 +111,7 @@
 
 <nav>
     <a href="#accueil">Accueil</a>
-    <a href="#propos">Vision</a>
+    <a href="#propos">Notre Esprit</a>
     <a href="#missions">Missions</a>
     <a href="#cotisation">Cotisation</a>
     <a href="#galerie">Galerie</a>
@@ -113,78 +119,111 @@
 
 <header id="accueil">
     <div class="logo-box">
-        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo">
+        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation">
     </div>
     <h1>And Ligueyal Mame Khalifa</h1>
-    <p style="font-style: italic; color: var(--or-prestige);">« L'action au service de la foi »</p>
+    <p style="font-size: 1.2em; opacity: 0.9;">« Servir est une grâce, s'unir est une force »</p>
+    <div style="margin-top: 30px;">
+        <a href="https://wa.me/221764699681" class="btn btn-wa">
+            <i class="fab fa-whatsapp"></i> REJOINDRE SUR WHATSAPP
+        </a>
+    </div>
 </header>
 
-<div class="main-content">
-    
-    <section id="propos">
-        <div class="container">
-            <h2>Notre Engagement</h2>
-            <p>Depuis le 4 février 2022, sous l'impulsion de Pape Samba Gueye, notre fondation œuvre sans relâche pour soutenir les nécessiteux et honorer l'héritage de Mame Khalifa. Chaque action est un pas de plus vers une communauté plus solidaire.</p>
-        </div>
-    </section>
+<section id="propos" class="sep-white">
+    <div class="container">
+        <h2>Philosophie de la Fondation</h2>
+        <p style="max-width: 800px; margin: auto; font-size: 1.1em; line-height: 1.8;">
+            Depuis le <strong>4 février 2022</strong>, sous l'impulsion de <strong>Pape Samba Gueye</strong>, la Fondation And Ligueyal Mame Khalifa s'est donné pour noble mission de soutenir les membres de la communauté et de perpétuer les enseignements de Mame Khalifa par l'action sociale et la solidarité.
+        </p>
+    </div>
+</section>
 
-    <section id="missions">
-        <div class="container">
-            <h2>Missions Clés</h2>
-            <div class="grid">
-                <div class="card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Social</h3>
-                    <p>Soutien alimentaire et financier aux familles démunies.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Éducation</h3>
-                    <p>Accompagnement spirituel et éducatif de la jeunesse.</p>
-                </div>
+<section id="missions" class="sep-grey">
+    <div class="container">
+        <h2>Nos Actions Prioritaires</h2>
+        <div class="mission-grid">
+            <div class="m-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Social & Aide</h3>
+                <p>Apporter un soutien financier et alimentaire aux familles lors des moments d'épreuve.</p>
+            </div>
+            <div class="m-card">
+                <i class="fas fa-mosque"></i>
+                <h3>Héritage Sacré</h3>
+                <p>Organisation et logistique lors des événements religieux majeurs à Tivaouane.</p>
+            </div>
+            <div class="m-card">
+                <i class="fas fa-users-line"></i>
+                <h3>Jeunesse</h3>
+                <p>Éducation et mentorat pour les jeunes générations de la Ligueyal.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="cotisation">
-        <div class="container">
-            <h2>Espace Cotisation</h2>
-            <p>Participez aux projets de la Fondation en envoyant vos contributions.</p>
-            <div class="cotisation-card">
-                <i class="fas fa-hand-holding-usd" style="font-size: 3em; color: var(--or-prestige); margin-bottom: 20px;"></i>
-                <div class="info-pay">
-                    <span style="color: #777; font-size: 0.8em; text-transform: uppercase;">Responsable</span><br>
-                    Astou Hann
-                </div>
-                <div class="info-pay">
-                    <span style="color: #777; font-size: 0.8em; text-transform: uppercase;">Numéro (Wave / Orange Money)</span><br>
-                    +221 76 927 62 52
-                </div>
-                <a href="tel:+221769276252" class="btn-wave">
-                    <i class="fas fa-mobile-alt"></i> Verser ma cotisation
-                </a>
-                <p style="font-size: 0.8em; margin-top: 20px; color: #888;">Cliquez sur le bouton pour appeler ou préparer le transfert directement.</p>
+<section id="cotisation" class="sep-white">
+    <div class="container">
+        <h2>Espace Cotisation</h2>
+        <p>Contribuez directement aux projets de la Fondation via Wave.</p>
+        
+        <div class="pay-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Wave_Logo.svg/1200px-Wave_Logo.svg.png" alt="Wave Logo" style="height: 50px; margin-bottom: 20px;">
+            
+            <div class="pay-info">
+                <label>Responsable de la collecte</label>
+                <div>Astou Hann</div>
             </div>
-        </div>
-    </section>
-
-    <section id="galerie">
-        <div class="container">
-            <h2>Galerie</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <img src="photo_2026-03-10_23-47-45.jpg" style="width:100%; border-radius:10px;">
-                <img src="photo_2026-03-10_23-47-45.jpg" style="width:100%; border-radius:10px;">
+            
+            <div class="pay-info">
+                <label>Numéro de téléphone</label>
+                <div>+221 76 927 62 52</div>
             </div>
-        </div>
-    </section>
 
-</div>
+            <p style="font-size: 0.9em; color: #666; margin: 20px 0;">Votre soutien permet d'aider ceux qui en ont le plus besoin.</p>
+            <a href="tel:+221769276252" class="btn btn-wave">
+                <i class="fas fa-paper-plane"></i> ENVOYER VIA WAVE DIRECT
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="galerie" class="sep-grey">
+    <div class="container">
+        <h2>Galerie Photos</h2>
+        <div class="galerie-flex">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Moment Fondation">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Action Sociale">
+        </div>
+    </div>
+</section>
 
 <footer>
-    <p><strong>Fondation And Ligueyal Mame Khalifa</strong></p>
-    <p>Contact : +221 76 469 96 81</p>
-    <p style="font-size: 0.7em; opacity: 0.5; margin-top: 30px;">&copy; 2026 | Site Officiel</p>
+    <div class="container">
+        <h3 style="color: var(--or-prestige); font-size: 1.5em; margin-bottom: 20px;">FONDATION AND LIGUEYAL MAME KHALIFA</h3>
+        <p style="color: white; opacity: 0.8;">« L'union dans la foi, l'action dans la solidarité »</p>
+        <div style="margin: 40px 0;">
+            <p><i class="fas fa-phone"></i> +221 76 469 96 81</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dakar / Tivaouane, Sénégal</p>
+        </div>
+        <hr style="width: 50px; border: 1px solid var(--or-prestige); margin: 30px auto;">
+        <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 | Site Officiel de la Fondation</p>
+    </div>
 </footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(sec => {
+            const top = sec.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+                sec.style.opacity = "1";
+                sec.style.transform = "translateY(0)";
+                sec.style.transition = "all 0.6s ease-out";
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
