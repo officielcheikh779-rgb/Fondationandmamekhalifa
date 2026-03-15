@@ -2,148 +2,133 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Fondation And Ligueyal Mame Khalifa | Site Officiel</title>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* CSS : DESIGN PROFESSIONNEL & RESPONSIVE */
         :root {
-            --bleu-profond: #0a2351;
+            --bleu-nuit: #051937;
             --or-prestige: #c5a021;
-            --or-clair: #f1d56e;
-            --blanc-soie: #ffffff;
-            --gris-fond: #f2f5f8;
+            --blanc-pur: #ffffff;
+            --gris-leger: #f4f7f9;
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Georgia', serif; margin: 0; background: var(--gris-fond); color: #2c3e50; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; padding: 0;
+            background: var(--gris-leger); 
+            color: #2c3e50; 
+            overflow-x: hidden;
+        }
 
-        /* NAVIGATION */
+        /* NAVIGATION FLOTTANTE */
         nav {
-            background: rgba(10, 35, 81, 0.95);
-            padding: 20px 0;
+            background: rgba(5, 25, 55, 0.98);
+            padding: 15px 0;
             position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--or-prestige);
+            top: 0; z-index: 2000;
+            display: flex; justify-content: center; flex-wrap: wrap;
+            border-bottom: 3px solid var(--or-prestige);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
         nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9em;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: 0.3s;
+            color: white; margin: 5px 15px;
+            text-decoration: none; font-weight: 700; font-size: 0.8em;
+            letter-spacing: 1px; text-transform: uppercase; transition: 0.3s;
         }
-        nav a:hover { color: var(--or-clair); }
+        nav a:hover { color: var(--or-prestige); }
 
         /* HEADER MAJESTUEUX */
         header {
-            background: linear-gradient(rgba(10, 35, 81, 0.7), rgba(10, 35, 81, 0.7)), 
-                        url('https://images.unsplash.com/photo-1590076215667-873d32442291?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            padding: 120px 20px;
-            text-align: center;
+            background: linear-gradient(rgba(5, 25, 55, 0.85), rgba(5, 25, 55, 0.85)), 
+                        url('https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 20px; text-align: center;
         }
 
-        .logo-container {
-            width: 220px; height: 220px;
-            background: white;
-            border-radius: 50%;
-            margin: 0 auto 40px;
-            border: 8px solid var(--or-prestige);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        .logo-box {
+            width: 200px; height: 200px;
+            background: white; border-radius: 50%;
+            margin: 0 auto 30px; border: 6px solid var(--or-prestige);
+            overflow: hidden; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
-        .logo-container img { width: 100%; height: 100%; object-fit: cover; }
+        .logo-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        h1 { font-size: 3.5em; margin-bottom: 5px; letter-spacing: 2px; text-transform: uppercase; }
-        .slogan { font-family: 'Times New Roman', serif; font-style: italic; font-size: 1.6em; color: var(--or-clair); margin-bottom: 40px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.8em; margin: 10px 0; line-height: 1.2; }
+        .slogan { font-style: italic; font-size: 1.3em; color: var(--or-prestige); margin-bottom: 40px; }
 
-        /* BOUTON D'ACTION */
-        .btn-contact {
+        /* BOUTON WHATSAPP */
+        .btn-wa {
             display: inline-block;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            padding: 20px 45px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: #25D366; color: white;
+            padding: 18px 40px; border-radius: 50px;
+            text-decoration: none; font-weight: 900; font-size: 1.1em;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
             transition: 0.4s;
         }
-        .btn-contact:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+        .btn-wa:hover { transform: scale(1.05); background: #1ebe57; }
 
-        /* SECTIONS ELOQUENTES */
-        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
+        /* SECTIONS ADAPTATIVES */
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
         
         section {
-            padding: 100px 60px;
-            background: white;
-            margin-bottom: 60px;
-            border-left: 10px solid var(--or-prestige);
-            box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+            padding: 60px 30px; background: white;
+            margin-bottom: 40px; border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            opacity: 0; transform: translateY(30px); /* Pour l'effet JavaScript */
+            transition: 0.8s all ease-out;
         }
+        section.reveal { opacity: 1; transform: translateY(0); }
         
-        h2 {
-            font-size: 2.8em;
-            color: var(--bleu-profond);
-            margin-bottom: 40px;
-            text-align: center;
-            font-weight: lighter;
-        }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.2em; color: var(--bleu-nuit); text-align: center; margin-bottom: 30px; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--or-prestige); margin: 15px auto; }
 
-        p { font-size: 1.15em; color: #444; margin-bottom: 25px; line-height: 1.8; text-align: justify; }
+        p { text-align: justify; line-height: 1.8; color: #444; }
 
-        /* GRILLE DE VALEURS */
-        .valeurs-grid {
+        /* GRILLE DE MISSIONS */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px; margin-top: 40px;
         }
-        .valeur-item {
-            text-align: center;
-            padding: 30px;
-            background: var(--gris-fond);
-            border-radius: 10px;
+        .card {
+            background: var(--gris-leger); padding: 35px;
+            border-radius: 15px; text-align: center;
+            border-bottom: 4px solid var(--or-prestige); transition: 0.3s;
         }
-        .valeur-item i { font-size: 3em; color: var(--or-prestige); margin-bottom: 20px; }
+        .card:hover { transform: translateY(-10px); background: white; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .card i { font-size: 3em; color: var(--or-prestige); margin-bottom: 20px; }
 
-        /* GALERIE D'ART */
+        /* GALERIE RESPONSIVE */
         .galerie {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
         }
         .galerie img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            filter: grayscale(20%);
-            transition: 0.5s;
-            border-bottom: 5px solid var(--or-prestige);
+            width: 100%; height: 220px; object-fit: cover;
+            border-radius: 12px; transition: 0.4s;
         }
-        .galerie img:hover { filter: grayscale(0%); transform: translateY(-10px); }
+        .galerie img:hover { transform: scale(1.03); filter: brightness(1.1); }
 
-        /* FOOTER NOBLE */
+        /* FOOTER */
         footer {
-            background: var(--bleu-profond);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
+            background: var(--bleu-nuit); color: white;
+            padding: 80px 20px; text-align: center;
+        }
+
+        /* MEDIA QUERIES (POUR TÉLÉPHONE) */
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .logo-box { width: 150px; height: 150px; }
+            section { padding: 40px 20px; }
+            nav a { font-size: 0.7em; margin: 5px 8px; }
         }
     </style>
 </head>
@@ -151,72 +136,86 @@
 
 <nav>
     <a href="#accueil">Accueil</a>
-    <a href="#philosophie">Philosophie</a>
+    <a href="#propos">Philosophie</a>
     <a href="#missions">Missions</a>
     <a href="#galerie">Galerie</a>
-    <a href="#contact">Contact</a>
 </nav>
 
 <header id="accueil">
-    <div class="logo-container">
-        <img src="photo_2026-03-10_23-47-45.jpg" alt="Sceau Officiel de la Fondation">
+    <div class="logo-box">
+        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation">
     </div>
     <h1>Fondation And Ligueyal Mame Khalifa</h1>
-    <p class="slogan">« Perpétuer l'Éclat de la Sagesse par l'Action Solidaire »</p>
-    <a href="https://wa.me/221764699681" class="btn-contact">Nous Rejoindre sur WhatsApp</a>
+    <p class="slogan">« Perpétuer l'Héritage par la Solidarité »</p>
+    <a href="https://wa.me/221764699681" class="btn-wa">
+        <i class="fab fa-whatsapp"></i> NOUS REJOINDRE
+    </a>
 </header>
 
 <div class="container">
     
-    <section id="philosophie">
-        <h2>Philosophie & Vision</h2>
-        <p>Fondée le <strong>4 février 2022</strong> par <strong>Pape Samba Gueye</strong>, la Fondation And Ligueyal Mame Khalifa n'est pas une simple institution, c'est une promesse faite à l'avenir. Elle incarne la volonté de transformer les enseignements spirituels de notre illustre guide en actions concrètes pour le bien commun.</p>
-        <p>Notre vision est claire : bâtir une société où la jeunesse est le moteur d'un développement ancré dans les valeurs religieuses et éthiques. Nous croyons que l'excellence se trouve dans le service aux autres (Ligueyal) et la fidélité à nos racines.</p>
+    <section id="propos">
+        <h2>Une Vision, Un Engagement</h2>
+        <p>Fondée le <strong>4 février 2022</strong> par <strong>Pape Samba Gueye</strong>, la Fondation And Ligueyal Mame Khalifa est un pilier de bienfaisance au Sénégal. Inspirés par les valeurs de notre guide spirituel, nous œuvrons chaque jour pour apporter un soutien concret et durable à notre communauté.</p>
+        <p>Notre engagement repose sur la <strong>Ligueyal</strong> : le service sacré. Que ce soit par l'aide alimentaire, l'éducation ou le soutien lors des événements religieux, nous sommes présents pour bâtir un futur empreint de dignité et de partage.</p>
     </section>
 
     <section id="missions">
-        <h2>Nos Piliers Fondamentaux</h2>
-        <div class="valeurs-grid">
-            <div class="valeur-item">
+        <h2>Nos Actions Majeures</h2>
+        <div class="grid">
+            <div class="card">
                 <i class="fas fa-hand-holding-heart"></i>
-                <h3>Solidarité Agissante</h3>
-                <p>Répondre avec célérité aux besoins des familles démunies et accompagner les membres de la communauté dans les moments d'épreuves.</p>
+                <h3>Social & Solidarité</h3>
+                <p>Aide d'urgence aux familles démunies et soutien aux orphelins.</p>
             </div>
-            <div class="valeur-item">
+            <div class="card">
                 <i class="fas fa-mosque"></i>
-                <h3>Dévotion Religieuse</h3>
-                <p>Assurer une logistique d'exception lors des grands rassemblements à Tivaouane, honorant ainsi l'hospitalité légendaire de Mame Khalifa.</p>
+                <h3>Service Religieux</h3>
+                <p>Logistique et accueil lors des grands rassemblements à Tivaouane.</p>
             </div>
-            <div class="valeur-item">
+            <div class="card">
                 <i class="fas fa-graduation-cap"></i>
-                <h3>Éveil des Consciences</h3>
-                <p>Transmettre aux nouvelles générations les clés de la réussite spirituelle et intellectuelle par des programmes d'apprentissage rigoureux.</p>
+                <h3>Éducation Jeunesse</h3>
+                <p>Transmission des valeurs et mentorat pour les générations futures.</p>
             </div>
         </div>
     </section>
 
     <section id="galerie">
-        <h2>L'Impact en Images</h2>
+        <h2>Moments de Vie</h2>
         <div class="galerie">
-            <img src="photo_2026-03-10_23-47-45.jpg" alt="Action de terrain 1">
-            <img src="photo1.jpg" alt="Action de terrain 2">
-            <img src="photo_2026-03-10_23-47-45.jpg" alt="Action de terrain 3">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Action 1">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Action 2">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Action 3">
         </div>
     </section>
 
 </div>
 
 <footer>
-    <h3 style="color:var(--or-prestige)">Fondation And Ligueyal Mame Khalifa</h3>
-    <p style="color:white; opacity:0.8;">Un héritage de paix. Un futur de solidarité.</p>
-    <div style="margin: 30px 0;">
-        <p>Siège social : Dakar, Sénégal<br>
-        Contact : +221 76 469 96 81<br>
-        Email : contact@fondationmamekhalifa.com</p>
+    <h3 style="color:var(--or-prestige)">FONDATION AND LIGUEYAL MAME KHALIFA</h3>
+    <p style="opacity: 0.8; font-size: 0.9em; margin-bottom: 30px;">
+        Dakar, Sénégal | Contact : +221 76 469 96 81
+    </p>
+    <div style="border-top: 1px solid rgba(255,255,255,0.
+        1); padding-top: 30px; font-size: 0.8em; opacity: 0.5;">
+        &copy; 2026 Tous droits réservés.
     </div>
-    <hr style="width:100px; border:1px solid var(--or-prestige); margin: 30px auto;">
-    <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 | Site Officiel Conçu pour la Gloire de l'Héritage.</p>
 </footer>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
 
 </body>
 </html>
