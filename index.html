@@ -3,115 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fondation And Ligueyal Mame Khalifa | Prestige</title>
+    <title>Fondation And Ligueyal Mame Khalifa</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bleu-nuit: #001a4d;    /* Bleu très profond */
-            --or-royal: #c5a021;     /* Doré prestige */
-            --blanc: #ffffff;
-            --fond-clair: #f8faff;   /* Pas de gris, un blanc bleuté très propre */
+            --bleu-royal: #002366;
+            --or-prestige: #c5a021;
+            --blanc-pur: #ffffff;
+            --fond-section: #f4f7f6;
         }
 
-        * { box-sizing: border-box; scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+        
         body { 
             font-family: 'Montserrat', sans-serif; 
-            margin: 0; padding: 0;
-            background-color: var(--blanc);
-            color: #2c3e50;
+            line-height: 1.6;
+            color: #333;
         }
 
-        /* --- 1. NAVIGATION PROFESSIONNELLE --- */
+        /* NAVIGATION BIEN ESPACÉE */
         nav {
-            background: var(--bleu-nuit);
-            padding: 20px 0;
+            background: var(--bleu-royal);
+            padding: 20px 10px;
             position: sticky;
-            top: 0; z-index: 9999;
-            border-bottom: 3px solid var(--or-royal);
+            top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--or-prestige);
             display: flex; justify-content: center; flex-wrap: wrap;
         }
         nav a {
-            color: var(--blanc); margin: 0 15px;
-            text-decoration: none; font-weight: 700; font-size: 0.8em;
-            text-transform: uppercase; letter-spacing: 1.5px;
-            transition: 0.3s;
+            color: white; text-decoration: none; margin: 5px 12px;
+            font-weight: 700; font-size: 0.85em; text-transform: uppercase;
         }
-        nav a:hover { color: var(--or-royal); }
 
-        /* --- 2. HEADER AVEC MOSQUÉE EN FOND --- */
+        /* HEADER AVEC IMAGE DE FOND (LA MOSQUÉE) */
         header {
-            position: relative;
-            min-height: 80vh;
-            display: flex; align-items: center; justify-content: center;
-            flex-direction: column;
+            min-height: 90vh; /* Hauteur ajustée pour mobile */
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
             text-align: center; color: white;
-            /* L'IMAGE DE LA MOSQUÉE EST ICI */
-            background: linear-gradient(rgba(0, 26, 77, 0.7), rgba(0, 26, 77, 0.7)), 
-                        url('mosquee.jpg'); 
+            padding: 40px 20px;
+            /* L'image mosquee.jpg doit être sur ton Github */
+            background: linear-gradient(rgba(0, 35, 102, 0.75), rgba(0, 35, 102, 0.75)), 
+                        url('mosquee.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Effet de défilement pro */
         }
 
         .logo-box {
-            width: 180px; height: 180px; background: white; border-radius: 50%;
-            border: 5px solid var(--or-royal);
+            width: 170px; height: 170px; 
+            background: white; border-radius: 50%;
+            border: 5px solid var(--or-prestige);
+            display: flex; align-items: center; justify-content: center;
             margin-bottom: 25px;
-            overflow: hidden; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 0 30px rgba(197, 160, 33, 0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .logo-box img { width: 90%; height: auto; }
+        .logo-box img { width: 85%; height: auto; border-radius: 50%; }
 
-        h1 { font-family: 'Playfair Display', serif; font-size: 3em; margin: 10px 0; }
-        .slogan { color: var(--or-royal); font-weight: 700; letter-spacing: 4px; text-transform: uppercase; font-size: 1.1em; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.4em; margin-bottom: 10px; }
+        .slogan { color: var(--or-prestige); font-weight: 700; letter-spacing: 3px; font-size: 0.9em; margin-bottom: 30px; }
 
-        /* --- 3. SECTIONS BIEN DÉLIMITÉES --- */
-        section { padding: 100px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        .btn-wa {
+            background: #25D366; color: white; padding: 18px 35px;
+            border-radius: 50px; text-decoration: none; font-weight: 800;
+            display: inline-block; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* SECTIONS BIEN DÉCOUPÉES */
+        section { padding: 80px 20px; text-align: center; }
         .container { max-width: 1000px; margin: auto; }
 
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5em; color: var(--bleu-nuit); margin-bottom: 20px; }
-        h2::after { content: ''; display: block; width: 80px; height: 4px; background: var(--or-royal); margin: 20px auto; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.2em; color: var(--bleu-royal); margin-bottom: 20px; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--or-prestige); margin: 15px auto; }
 
-        /* --- 4. CARTES MISSIONS (BLANC SUR FOND CLAIR) --- */
+        /* GRILLE MISSIONS */
         .missions-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px; margin-top: 50px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; margin-top: 40px;
         }
-        .mission-card {
-            background: var(--blanc); padding: 40px; border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--or-royal);
-            transition: 0.3s;
+        .m-card {
+            background: var(--blanc-pur); padding: 40px; border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            border-bottom: 5px solid var(--or-prestige);
         }
-        .mission-card:hover { transform: translateY(-10px); }
-        .mission-card i { font-size: 3.5em; color: var(--bleu-nuit); margin-bottom: 20px; }
+        .m-card i { font-size: 3em; color: var(--bleu-royal); margin-bottom: 20px; }
 
-        /* --- 5. SECTION COTISATION (WAVE) --- */
-        #cotisation { background: var(--bleu-nuit); color: white; }
-        #cotisation h2 { color: var(--or-royal); }
-        .wave-box {
-            background: white; color: #333; padding: 50px;
-            max-width: 550px; margin: 40px auto; border-radius: 30px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        /* SECTION COTISATION PRESTIGE */
+        #cotisation { background: var(--bleu-royal); color: white; }
+        #cotisation h2 { color: var(--or-prestige); }
+        
+        .wave-card {
+            background: white; color: #333; padding: 40px;
+            max-width: 500px; margin: 40px auto; border-radius: 25px;
+box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
         .btn-wave {
-            display: inline-block; background: #1c9ade; color: white;
-            padding: 18px 40px; border-radius: 50px; text-decoration: none;
-            font-weight: 800; margin-top: 25px; width: 100%; transition: 0.3s;
+            display: block; background: #1c9ade; color: white;
+            padding: 18px; border-radius: 12px; text-decoration: none;
+            font-weight: 800; margin-top: 25px;
         }
-        .btn-wave:hover { transform: scale(1.02); background: #167fb8; }
 
-        /* --- 6. FOOTER --- */
-        footer { background: #000c26; color: white; padding: 80px 20px; text-align: center; }
+        /* FOOTER */
+        footer { background: #001540; color: white; padding: 60px 20px; text-align: center; }
 
-        /* ADAPTATION MOBILE */
-        @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            .logo-box { width: 140px; height: 140px; }
-            section { padding: 60px 20px; }
+        /* MOBILE */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            section { padding: 60px 15px; }
         }
     </style>
 </head>
@@ -119,46 +119,42 @@
 
 <nav>
     <a href="#accueil">Accueil</a>
-    <a href="#propos">Vision</a>
+    <a href="#esprit">Esprit</a>
     <a href="#missions">Missions</a>
     <a href="#cotisation">Cotisation</a>
 </nav>
 
 <header id="accueil">
     <div class="logo-box">
-        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation">
+        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo">
     </div>
     <h1>And Ligueyal Mame Khalifa</h1>
-    <p class="slogan">Tivaouane • Foi • Solidarité</p>
-    <div style="margin-top: 40px;">
-        <a href="https://wa.me/221764699681" style="background:#25D366; color:white; padding:20px 40px; border-radius:50px; text-decoration:none; font-weight:800; box-shadow:0 10px 20px rgba(0,0,0,0.2);">
-            <i class="fab fa-whatsapp"></i> NOUS REJOINDRE
-        </a>
-    </div>
+    <p class="slogan">TIVAOUANE • FOI • SOLIDARITÉ</p>
+    <a href="https://wa.me/221764699681" class="btn-wa">
+        <i class="fab fa-whatsapp"></i> REJOINDRE LA FAMILLE
+    </a>
 </header>
 
-<section id="propos" style="background: var(--fond-clair);">
+<section id="esprit">
     <div class="container">
-        <h2>Une Vision, Un Engagement</h2>
-        <p style="font-size: 1.2em; line-height: 2; max-width: 800px; margin: auto;">
-            Fondée le <strong>4 février 2022</strong> par <strong>Pape Samba Gueye</strong>, notre fondation est un pilier de bienfaisance à Tivaouane. Nous œuvrons pour que l'entraide et la solidarité brillent au sein de notre communauté, en suivant les pas de nos guides spirituels.
-        </p>
+        <h2>Notre Vision</h2>
+        <p style="font-size: 1.1em; max-width: 800px; margin: auto;">Fondée par <strong>Pape Samba Gueye</strong>, la fondation œuvre pour le soutien des membres et le rayonnement de l'œuvre de Mame Khalifa à travers des actions concrètes de solidarité.</p>
     </div>
 </section>
 
-<section id="missions">
+<section id="missions" style="background: var(--fond-section);">
     <div class="container">
-        <h2>Nos Actions Prioritaires</h2>
+        <h2>Missions Clés</h2>
         <div class="missions-grid">
-            <div class="mission-card">
-                <i class="fas fa-hand-holding-heart"></i>
+            <div class="m-card">
+                <i class="fas fa-hands-holding-circle"></i>
                 <h3>Soutien Social</h3>
-                <p>Aide alimentaire et financière aux familles nécessiteuses et aux orphelins.</p>
+                <p>Aide directe aux familles et accompagnement des nécessiteux.</p>
             </div>
-            <div class="mission-card">
-                <i class="fas fa-kaaba"></i>
-                <h3>Héritage Religieux</h3>
-                <p>Organisation et logistique lors des grands rassemblements de la cité sainte.</p>
+            <div class="m-card">
+                <i class="fas fa-mosque"></i>
+                <h3>Patrimoine</h3>
+                <p>Logistique et service lors des événements religieux à Tivaouane.</p>
             </div>
         </div>
     </div>
@@ -166,31 +162,22 @@
 
 <section id="cotisation">
     <div class="container">
-        <h2>Soutenez la Fondation</h2>
-        <p>Chaque geste compte. Versez votre cotisation directement via Wave.</p>
-        
-        <div class="wave-box">
-            <img src="wave-logo.png" alt="Wave" style="height: 60px; margin-bottom: 25px;">
-            <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-                <span style="font-size: 0.8em; color: #777; font-weight: bold; text-transform: uppercase;">Trésorière</span><br>
-                <strong style="font-size: 1.6em;">Astou Hann</strong>
-            </div>
-            <div>
-                <span style="font-size: 0.8em; color: #777; font-weight: bold; text-transform: uppercase;">Numéro Wave</span><br>
-                <strong style="font-size: 1.6em;">+221 76 927 62 52</strong>
-            </div>
-            <a href="tel:+221769276252" class="btn-wave">VERSER VIA WAVE DIRECT</a>
+        <h2>Espace Cotisation</h2>
+        <div class="wave-card">
+            <img src="wave-logo.png" alt="Wave" style="height: 50px; margin-bottom: 20px;">
+            <p style="color: #777; text-transform: uppercase; font-size: 0.8em; font-weight: bold;">Trésorière</p>
+            <p style="font-size: 1.5em; font-weight: 700; margin-bottom: 15px;">Astou Hann</p>
+            <p style="color: #777; text-transform: uppercase; font-size: 0.8em; font-weight: bold;">Numéro de paiement</p>
+            <p style="font-size: 1.5em; font-weight: 700;">+221 76 927 62 52</p>
+            <a href="tel:+221769276252" class="btn-wave">PAYER VIA WAVE DIRECT</a>
         </div>
     </div>
 </section>
 
 <footer>
-    <div class="container">
-        <h3 style="color: var(--or-royal); font-family: 'Playfair Display', serif; font-size: 1.8em;">AND LIGUEYAL MAME KHALIFA</h3>
-        <p>« Servir est notre mission, s'unir est notre force »</p>
-        <p style="margin-top: 30px;"><i class="fas fa-phone"></i> +221 76 469 96 81</p>
-        <p style="font-size: 0.7em; opacity: 0.4; margin-top: 50px;">&copy; 2026 - Site Officiel de la Fondation. Tous droits réservés.</p>
-    </div>
+    <p style="font-family: 'Playfair Display', serif; font-size: 1.4em; color: var(--or-prestige);">FONDATION AND LIGUEYAL MAME KHALIFA</p>
+    <p style="margin: 15px 0;">Contact : +221 76 469 96 81</p>
+    <p style="font-size: 0.7em; opacity: 0.5;">&copy; 2026 - Site Officiel</p>
 </footer>
 
 </body>
